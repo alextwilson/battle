@@ -17,11 +17,4 @@ describe Player do
       expect(player.receive_damage).to eq 90
     end
   end
-
-  describe '#attack' do
-    it 'reduces target\'s hit points' do
-      player.attack(player2)
-      expect(player2).to have_received(:receive_damage)
-    end
-  end
 end
