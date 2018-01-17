@@ -1,5 +1,5 @@
-<h1><%= @player1name %>, ready? Hit points: 100</h1>
-<h1><%= @player2name %>, ready? Hit points: 100</h1><br>
+<h1><%= @player1name %>, ready? Hit points: <%= @player1hp %></h1>
+<h1><%= @player2name %>, ready? Hit points: <%= @player2hp %></h1><br>
 <form action="/hit">
   <input type="submit" value="Attack">
 </form>
