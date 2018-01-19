@@ -27,4 +27,8 @@ class Game
       @player1
     end
   end
+
+  def gameover?
+    @player1.hp < 1 || @player2.hp < 1
+  end
 end

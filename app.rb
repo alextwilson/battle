@@ -20,7 +20,7 @@ class Battle < Sinatra::Base
     erb(:play)
   end
 
-  get '/attack' do
+  post '/attack' do
     @game = $game
     @game.attack
     erb(:attack)
@@ -28,7 +28,13 @@ class Battle < Sinatra::Base
 
   get '/change_player' do
     @game = $game
+    redirect to ('/loss') if @game.gameover?
     @game.change_player
     redirect to ('/play')
+  end
+
+  get '/loss' do
+    @game = $game
+    erb(:loss)
   end
 end

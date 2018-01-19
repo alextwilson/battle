@@ -1,4 +1,6 @@
 <h1>Current player: <%= @game.current_player.name %></h1>
 <h1><%=@game.player1.name%> HP<%=@game.player1.hp%> vs
    HP<%=@game.player2.hp%> <%=@game.player2.name%></h1>
-<a href="/attack">Attack</a>
+<form action="/attack" method="post">
+  <input type="submit" value="Attack">
+</form>
