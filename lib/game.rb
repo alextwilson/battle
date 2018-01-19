@@ -1,5 +1,13 @@
 class Game
 
+  def self.create(player1, player2)
+    @game = self.new(player1, player2)
+  end
+
+  def self.instance
+    @game
+  end
+
   attr_reader :player1, :player2, :current_player
 
   def initialize(player1, player2)
